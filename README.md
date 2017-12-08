@@ -4,12 +4,12 @@ This project demonstrates how to use **Driver License Parser library for Android
 
 ## Installation
 
-1. Download the [latest version](https://idscan.net/support/dlparser-android-sdk-documentation/) of **Driver License Parser Library for Android**. The downloaded archive should contain next components:
+1. Download the [latest version](https://idscan.net/support/dlparser-android-sdk-documentation/) of **Driver License Parser Library for Android**. The archive contains next components:
     - **Native libraries for different platforms** (./arm64-v8a/libidscan_parser.so,  ./armeabi/libidscan_parser.so,  ./armeabi-v7a/libidscan_parser.so,  ./mips/libidscan_parser.so,  ./mips64/libidscan_parser.so,  ./x86/libidscan_parser.so,  ./x86_64/libidscan_parser.so)
 
     - **Java wrapper** (./dlparserlib.jar).
 
-2. Put native libraries in '**{MODULE}/src/main/jniLibs**' folder of your project. The project structure might look like this:
+2. Put native libraries in '**{MODULE}/src/main/jniLibs**' folder of your project. The project structure looks like this:
 ```
 {MODULE}
   ├ src
@@ -31,7 +31,7 @@ This project demonstrates how to use **Driver License Parser library for Android
             └ libidscan_parser.so
 ```
 
-3. Put **dlparserlib.jar** in '**{MODULE}/libs**' folder of your project. The project structure might look like this:  
+3. Put **dlparserlib.jar** in '**{MODULE}/libs**' folder of your project. The project structure looks like this:
 ```
 {MODULE}
   ├ libs
@@ -81,7 +81,7 @@ try {
 }
 ```
 
-3. Parse a data. For parsing data, you need to call ```parse(byte[])``` method.  
+3. Parse the data. For parsing data you need to call ```parse(byte[])``` method.  
 ```
 try {
     DLResult res = parser.parse(data);
