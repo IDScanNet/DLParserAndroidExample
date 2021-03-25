@@ -2,68 +2,31 @@
 
 This project demonstrates how to use **Driver License Parser library for Android** from [IDScan.net](https://idscan.net/).
 
-## Installation
+## Setup
 
-1. Download the [latest version](https://idscan.net/support/dlparser-android-sdk-documentation/) of **Driver License Parser Library for Android**. The archive contains next components:
-    - **Native libraries for different platforms** (./arm64-v8a/libidscan_parser.so,  ./armeabi/libidscan_parser.so,  ./armeabi-v7a/libidscan_parser.so,  ./mips/libidscan_parser.so,  ./mips64/libidscan_parser.so,  ./x86/libidscan_parser.so,  ./x86_64/libidscan_parser.so)
-
-    - **Java wrapper** (./dlparserlib.jar).
-
-2. Put native libraries in '**{MODULE}/src/main/jniLibs**' folder of your project. The project structure looks like this:
+1. Add **idscan-public** maven repository to the project **build.gradle** file.
 ```
-{MODULE}
-  ├ src
-    ├ main
-      ├ jniLibs
-        ├ arm64-v8a
-        |   └ libidscan_parser.so
-        ├ armeabi
-        |   └ libidscan_parser.so
-        ├ armeabi-v7a
-        |   └ libidscan_parser.so
-        ├ mips
-        |   └ libidscan_parser.so
-        ├ mips64
-        |   └ libidscan_parser.so
-        ├ x86
-        |   └ libidscan_parser.so
-        ├ x86_64
-            └ libidscan_parser.so
+allprojects {
+    repositories {
+        ...
+        maven {
+            url 'https://www.myget.org/F/idscan-public/maven/'
+        }
+        ...
+    }
+}
 ```
 
-3. Put **dlparserlib.jar** in '**{MODULE}/libs**' folder of your project. The project structure looks like this:
-```
-{MODULE}
-  ├ libs
-  |   └ dlparserlib.jar
-  ├ src
-    ├ main
-      ├ jniLibs
-        ├ arm64-v8a
-        |   └ libidscan_parser.so
-        ├ armeabi
-        |   └ libidscan_parser.so
-        ├ armeabi-v7a
-        |   └ libidscan_parser.so
-        ├ mips
-        |   └ libidscan_parser.so
-        ├ mips64
-        |   └ libidscan_parser.so
-        ├ x86
-        |   └ libidscan_parser.so
-        ├ x86_64
-            └ libidscan_parser.so
-```
-
-4. Update the dependencies section in **builder.gradle** and synchronize the project.
+2. Add the following to the module **build.gradle** file:
 ```
 dependencies {
     ...
-    compile files('libs/dlparserlib.jar')
+    implementation 'net.idscan.components.android:dlparser-standard:1.27.0'
     ...
 }
 ```
-Or right-click on **dlparserlib.jar** file and select **Add Library**.
+
+**Note** if you have already installed version before 1.27.0 you have to remove it from the project.
 
 ## Usage
 
