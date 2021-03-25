@@ -30,7 +30,7 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
     private DLParser parser = null;
-    private static final String _KEY = "pojPNxHj0DveY/gyoiR4BjLnaxyOKM0mZnWo9JiFmca4DwbsALtS0z6YK/GjAIwmjKqEOOueERe6B5PzaEYxDVPwX3KcwurTdkIkwcqOT7MrVoOioJ5Gitd3KzKfFphGMKPyQekf8JHoXi3erkrZl34wryd0xmXExTTcr+253Yw=";
+    private static final String _KEY = "CF47wsW6ZAj2eZ4Mdfo72+k9Q61wQbemMf+EtZxMBHaS/J2xOhk7+T6zMRKf8Jb3dWV6RSBfp1/H/Nc/MnI23yV8qTH+NnyEhb/MLcnQ7gQpao0adr+yITXuHUJiXWu5q4FH58owjMNy1UMNggFqrqkh99XT//kdRthrWP1+GdU=";
     final String test_data = "%MNBURNSVILLE^HOMER J. SYMPSON^13225 MADRID RD^?\n\n;636038326007403611=12091991090106?\n\n%\" 55306      D               F064124   HZL                           X\"+H)     ?";
 
     @Override
