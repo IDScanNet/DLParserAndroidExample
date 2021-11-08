@@ -21,12 +21,12 @@ allprojects {
 ```
 dependencies {
     ...
-    implementation 'net.idscan.components.android:dlparser-standard:1.27.0'
+    implementation 'net.idscan.components.android:dlparser-standard:1.28.4'
     ...
 }
 ```
 
-**Note** if you have already installed version before 1.27.0 you have to remove it from the project.
+**Note** if you have already installed version before 1.28.4 you have to remove it from the project.
 
 ## Usage
 
